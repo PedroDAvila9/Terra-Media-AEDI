@@ -7,6 +7,7 @@ Implementação de um sistema em C que simula a jornada de Frodo para destruir o
 ## 🏗️ Estruturas de Dados Utilizadas
 **1. Árvore Binária**
 
+### Árvore Binária (Mapa)
 Finalidade: 
 - Representar o mapa hierárquico da Terra Média
 
@@ -17,6 +18,15 @@ Justificativa:
 - Navegação eficiente (esquerda/direita para movimentação)
 
 - Busca rápida de locais conectados
+
+### Árvore Binária (Inventário)
+Finalidade:  
+- Organizar e armazenar os itens coletados por Frodo.
+
+Justificativa:  
+- Inserção ordenada (usando `strcmp` para comparar nomes dos itens).  
+- Facilita a busca de itens para serem usados na batalha ou listados em ordem alfabética.  
+- Exemplifica uma segunda aplicação de árvores binárias no projeto.
 
 **2. Fila**
 
