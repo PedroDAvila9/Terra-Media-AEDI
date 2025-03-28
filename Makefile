@@ -1,15 +1,15 @@
 # -- compilador
 CC = gcc
 # -- flags de compilação
-CFLAGS = -Wall -Wextra -std=c99 -g
+CFLAGS = -Wall -Wextra -std=c99 -g -Iincludes
 # -- nome do executável
 TARGET = terra_media
 # -- arquivos fonte
-SRC = main.c terra_media.c fila.c pilha.c inventario.c
+SRC = main.c src/terra_media.c src/fila.c src/pilha.c src/inventario.c
 # -- arquivos objeto
 OBJ = $(SRC:.c=.o)
 # -- headers
-HEADERS = terra_media.h fila.h pilha.h
+HEADERS = includes/terra_media.h includes/fila.h includes/pilha.h includes/inventario.h
 
 # -- regra principal
 all: $(TARGET)

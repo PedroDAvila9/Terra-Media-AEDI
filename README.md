@@ -38,7 +38,7 @@ Finalidade:
 
 Justificativa:
 
-- LIFO para voltar aos locais anteriores
+- LIFO para voltar aos locais anteriores, apenas desempilhando o último item empilhado
 
 - Histórico de navegação simples
 
@@ -65,8 +65,22 @@ Justificativa:
 - **Inventário organizado como árvore binária**
   
 ## 🛠️ Como Compilar e Executar
-**Pré-requisitos**
-Compilador GCC
+**Pré-requisitos**: Compilador GCC (ou equivalente) e Make instalado.
+
+1. Abra o terminal na pasta do projeto.
+2. Para compilar todo o código, digite:
+    ```bash
+    make
+    ```
+3. Para executar o programa:
+    ```bash
+    make run
+    ```
+4. Para limpar os arquivos objeto (.o) e o executável:
+    ```bash
+    make clean
+    ```
+5. Caso deseje executar manualmente após o make, basta rodar ./terra_media diretamente no terminal.
 
 ## 💡 Lógica de Implementação
 
@@ -88,13 +102,40 @@ Gerenciamento de estado do jogo
 
 Integração das estruturas de dados
 
+Uso de TADs para que tenhamos organização entre especificação e implementação
+
 ## **🎯 Objetivo do Jogo**
 
 Guiar Frodo até Mordor para destruir o Anel, coletando itens e sobrevivendo às batalhas.
 
+### Como Jogar
+
+1. **Menu Principal**  
+   - **[1]** Explorar local atual  
+     - Possibilidade de encontrar itens e inimigos.  
+   - **[2]** Mover para a esquerda (←)  
+   - **[3]** Mover para a direita (→)  
+   - **[4]** Voltar ao local anterior (usa a pilha de histórico)  
+   - **[5]** Status de Frodo (exibe vida, força, resistência, inventário)  
+   - **[6]** Inventário (listar e usar itens)  
+   - **[0]** Sair do jogo  
+
+2. **Combate**  
+   - Iniciado ao explorar um local com inimigos.  
+   - **Ações**: Atacar, Defender, Usar item ou Fugir.  
+
+3. **Itens**  
+   - Ao explorar, pode-se encontrar itens (cura, força, resistência).  
+   - Armazenados em uma árvore binária de inventário, ordenados por nome.  
+
+4. **Condição de Vitória**  
+   - Estar em Mordor com o Anel, escolher destruir o Anel.  
+
+5. **Condição de Derrota**  
+   - Se Frodo chegar a 0 de vida em combate.
 
 ## 👥 Autores
 
 Pedro Victor Valle Gonçalves
 
-Pedro D'Avila
+Pedro D'Ávila
